@@ -1,4 +1,4 @@
-<%--<%@ page import="entites.Message" %>
+<%@ page import="entities.Message" %><%--<%@ page import="entites.Message" %>
 <%
   Created by IntelliJ IDEA.
   User: The Networks
@@ -35,24 +35,24 @@
             <p>Login Here</p>
           </div>
 
-<%--          <%--%>
+          <%
 
-<%--            Message m=(Message)session.getAttribute("msg");--%>
-<%--            if(m != null){--%>
+            Message m=(Message)session.getAttribute("msg");
+            if(m != null){
 
-<%--          %>--%>
-<%--          <div class="alert <%= m.getCssClass()%>" role="alert">--%>
-<%--            <%= m.getContent()%>--%>
-<%--          </div>--%>
-<%--          <%--%>
-<%--              session.removeAttribute("msg");--%>
-<%--            }--%>
+          %>
+          <div class="alert <%= m.getCssClass()%>" role="alert">
+            <%= m.getContent()%>
+          </div>
+          <%
+              session.removeAttribute("msg");
+            }
 
 
-<%--          %>--%>
+          %>
 
           <div class="card-body">
-            <form action="Login.Servlet" method="post">
+            <form action="LoginServlet" method="post">
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input name="email" required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">

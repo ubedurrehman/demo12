@@ -12,6 +12,8 @@ public class User {
     private Timestamp dateTime;
     private String about;
 
+    private String profile;
+
     public User(String name, String email, String password, String gender, String about) {
         this.id = id;
         this.name = name;
@@ -90,6 +92,14 @@ public class User {
 
     public void setAbout(String about) {
         this.about = about;
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 
     @Override

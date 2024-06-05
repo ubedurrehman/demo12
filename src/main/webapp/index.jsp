@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="css/mystyle.css " type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link src="js/myjs.js" type="text/javascript">
+<%
+ int a = 0/10;
 
+%>
 
 
 

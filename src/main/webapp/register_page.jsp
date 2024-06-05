@@ -88,3 +88,59 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/myjs.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        console.log("loaded...");
+
+        $('#reg-form').on('submit', function (event) {
+            // alert("SUBMIITED");
+            //console.log(this);
+            event.preventDefault();
+
+
+            let form = new FormData(this);
+            // $("#sumbimt-btn").hide();
+            // $("#loader").show();
+
+            //send register servlet
+
+            $.ajax({
+                processData: false,
+                contentType: false,
+                url: "RegisterServlet",
+                type: 'POST',
+                data: form,
+                success: function (data, textStatus, jqXHR) {
+                    console.log(data)
+
+                    $("#sumbimt-btn").show();
+                    $("#loader").hide();
+                    if(data.trim() === 'done') {
+
+                        swal("registered sucessfully.. we redirecting to login page.")
+                            .then((value) => {
+                                window.location = "login_page.jsp"
+                            });
+                    }else
+                    {
+                        swal(data);
+                    }
+
+                },
+                error: function (jqXHR, textStatus, errorThrown){
+                    $("#sumbimt-btn").show();
+                    $("#loader").hide();
+                    swal('error',"something went wrong...try again."+textStatus);
+
+                },
+
+
+            });
+
+        });
+    });
+</script>
+
+</body>
+</html>
