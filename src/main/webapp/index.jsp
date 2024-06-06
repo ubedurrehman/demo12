@@ -18,17 +18,9 @@
     <link rel="stylesheet" href="css/mystyle.css " type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link src="js/myjs.js" type="text/javascript">
-<%
- int a = 0/10;
-
-%>
 
 
-
-
-
-
-        <style>
+ <style>
         banner-background{
             clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 93%, 70% 100%, 26% 90%, 0 100%, 0 0);
         }
@@ -43,10 +35,11 @@
         <div class="container">
 
 
-            <h3 class=""display-3> Tech Blog</h3>
-            <p>Weolcome to technical blog, world of technology
-                A programming language is a system of notation for writing computer programs.</p>
-            <p>rogramming languages are described in terms of their syntax (form) and semantics (meaning), usually defined by a formal language.</p>
+            <h3 class=""display-3> About Company</h3>
+            <p>Centegy Technologies, is a technology solutions provider focusing on the licensing, implementation and support of enterprise applications across Retail and Insurance industries.
+                Our motto for Centegy Technologies is ‘People. Expertise. Integrity’. </p>
+            <p>This is quite apt considering the expertise and knowledge our teams have gained by implementing our solutions and operating in these industries since 1986.
+                Apart from technology solutions, we also offer strategic advise to our clients on how to penetrate new markets, increase market share and further leverage technology to establish leadership positions</p>
             <button class="btn btn-outline-light btn-lg"> <span class="fa fa-external-link"></span> Start ! its Free</button>
             <a href="login_page.jsp " class="btn btn-outline-light btn-lg">  <span class="fa fa-user-circle fa-spin"></span> Login</a>
         </div>
